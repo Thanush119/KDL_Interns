@@ -16,7 +16,7 @@ for col in df.select_dtypes(include='object').columns:
     label_encoders[col] = le
 df.fillna(df.median(numeric_only=True), inplace=True)
 df.fillna(df.mode().iloc[0], inplace=True)
-X = df.drop('classification', axis=1)
+X = df.drop('classification', axis=1)   
 y = df['classification']
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 model = RandomForestClassifier(random_state=42)

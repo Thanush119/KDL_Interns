@@ -7,3 +7,4 @@ imputer = SimpleImputer(missing_values=np.nan, strategy='most_frequent')
 imputer = imputer.fit(y)
 y= imputer.transform(y)
 print(y)
+        
